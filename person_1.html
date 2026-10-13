@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Person 1</title>
+  <style>
+    :root{
+      --b-c: #6CB3A9;
+      --c-1: #D25B70;
+      --c-2: #FFFFFF;
+      --c-3: #781728;
+      --c-4: #F6DF96;
+    }
+    body{
+      background: var(--b-c);
+    }
+    p{
+      border-radius: 50%;
+      margin: 40vh auto 0 auto;
+      background: radial-gradient(
+        circle at 50% 50%,
+        var(--c-4) 0,
+        25px, #0000 25px
+      ),
+      radial-gradient(
+        circle at 50% 50%,
+        var(--c-3) 0,
+        35px, #0000 35px
+      ),
+      linear-gradient(
+        var(--c-1) 0,
+        45%, var(--c-3) 45%,
+        55%, var(--c-2) 55%
+      );
+      height: 200px;
+      width: 200px;
+      &:before, &:after{
+        display: block;
+        content: '';
+        background: var(--b-c);
+        height: 20px;
+        width: 10px;
+        top: 90px;
+        position: relative;
+      }
+      &:after{
+        left: 190px;
+        margin-top: -20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <p></p>
+</body>
+</html>
